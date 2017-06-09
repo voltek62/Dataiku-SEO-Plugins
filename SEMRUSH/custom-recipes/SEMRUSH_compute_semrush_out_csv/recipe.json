@@ -1,0 +1,85 @@
+// This file is the descriptor for the Custom code recipe SEMRUSH_compute_semrush_out_csv
+{
+    // Meta data for display purposes
+    "meta" : {
+        "label" : "Plugin to create a dataset from SEMrush API",
+        "author" : "Vincent Terrasi",
+        "tags" : ["seo","semrush"]
+    },
+
+    "kind" : "R",
+    
+    "selectableFromDataset" : true,
+
+    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
+    // or more dataset to each input and output role.
+
+    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
+    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
+    // associate no dataset with the role.
+
+    "outputRoles" : [
+        {
+            "name": "main_output",
+            "label": "main output displayed name",
+            "description": "what main output means",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+        // ...
+    ],
+
+    // The field "params" holds a list of all the params
+    // for wich the user will be prompted for values in the Settings tab of the recipe.
+
+    // The available parameter types are:
+    // STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, COLUMN, COLUMNS, TEXTAREA
+        
+        
+    "params": [
+        {
+            "name": "keyAPI",
+            "label" : "SEMrush Key API",
+            "type": "STRING",
+            "description":"",
+            "mandatory" : true
+        },
+        {
+            "name": "domain",
+            "label" : "Domain",
+            "type": "STRING",
+            "description":"ovh.com",
+            "mandatory" : true
+        },
+        {
+            "name": "country",
+            "label" : "Country",
+            "type": "STRING",
+            "description":"e.g. : fr, en, ...",
+            "mandatory" : true
+        },
+        {
+            "name": "limit",
+            "label" : "Limit",
+            "type": "STRING",
+            "description":"Max results",
+            "mandatory" : true
+        },
+        {
+            "name": "nbresult",
+            "label" : "Resuls per page",
+            "type": "STRING",
+            "description":"default 100",
+            "mandatory" : true
+        },
+        {
+            "name": "filter",
+            "label" : "Filter",
+            "type": "STRING",
+            "description":"Use it to remove brand keyword",
+            "mandatory" : false
+        }        
+    ]
+
+}
