@@ -17,3 +17,9 @@ Inside DSS, click the top right gear → Administration → Plugins → Store.
 
 - SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2017_06_09.zip
 
+## Need help
+
+My blog : https://data-seo.com
+
+My twitter : @vincentterrasi
+
