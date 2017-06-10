@@ -11,7 +11,9 @@ A DSS plugin is a zip file.
 
 Inside DSS, click the top right gear → Administration → Plugins → Store.
 
-> MAJESTIC : MAJESTIC/dssPlugin_MAJESTIC__2017_06_09.zip
-> SEARCHCONSOLE : SEARCHCONSOLE/dssPlugin_SEARCHCONSOLE__2017_06_09.zip
-> SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2017_06_09.zip
+- MAJESTIC : MAJESTIC/dssPlugin_MAJESTIC__2017_06_09.zip
+
+- SEARCHCONSOLE : SEARCHCONSOLE/dssPlugin_SEARCHCONSOLE__2017_06_09.zip
+
+- SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2017_06_09.zip
 
