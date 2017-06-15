@@ -23,3 +23,6 @@ My blog : https://data-seo.com
 
 My twitter : @vincentterrasi
 
+## Do you have a question
+
+Forums : http://discuss.data-seo.com
