@@ -1,15 +1,14 @@
-// This file is the descriptor for the Custom code recipe SEMRUSH_compute_semrush_out_csv
+// This file is the descriptor for the Custom code recipe compute_semrush_out_csv
 {
     // Meta data for display purposes
     "meta" : {
-        "label" : "Plugin to create a dataset from SEMrush API",
-        "author" : "Vincent Terrasi",
-        "tags" : ["seo","semrush"]
+        "label" : "Plugin SEMRUSH",
+        "description" : "Get dataset from SEMRUSH",
+        "icon" : "icon-puzzle-piece"
     },
 
     "kind" : "R",
     
-    "selectableFromDataset" : true,
 
     // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
     // or more dataset to each input and output role.
@@ -18,16 +17,19 @@
     // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
     // associate no dataset with the role.
 
+    "inputRoles" : [
+         
+    ],
+
     "outputRoles" : [
         {
             "name": "main_output",
             "label": "main output displayed name",
-            "description": "what main output means",
+            "description": "",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
         }
-        // ...
     ],
 
     // The field "params" holds a list of all the params
@@ -35,12 +37,11 @@
 
     // The available parameter types are:
     // STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, COLUMN, COLUMNS, TEXTAREA
-        
-        
+
     "params": [
         {
-            "name": "keyAPI",
-            "label" : "SEMrush Key API",
+            "name": "key",
+            "label" : "Key API",
             "type": "STRING",
             "description":"",
             "mandatory" : true
@@ -49,37 +50,37 @@
             "name": "domain",
             "label" : "Domain",
             "type": "STRING",
-            "description":"ovh.com",
+            "description":"e.g. ovh.com",
             "mandatory" : true
         },
         {
             "name": "country",
-            "label" : "Country",
+            "label" : "Country ISO 2",
             "type": "STRING",
-            "description":"e.g. : fr, en, ...",
+            "description":"fr",
             "mandatory" : true
-        },
-        {
-            "name": "limit",
-            "label" : "Limit",
-            "type": "STRING",
-            "description":"Max results",
-            "mandatory" : true
-        },
-        {
-            "name": "nbresult",
-            "label" : "Resuls per page",
-            "type": "STRING",
-            "description":"default 100",
-            "mandatory" : true
-        },
+        },        
         {
             "name": "filter",
-            "label" : "Filter",
+            "label" : "Brand",
             "type": "STRING",
-            "description":"Use it to remove brand keyword",
-            "mandatory" : false
-        }        
-    ]
+            "description":"",
+            "mandatory" : true
+        },       
+        {
+            "name": "limit",
+            "type": "INT",
+            "defaultValue" : 100
+        }
+
+    ],
+
+    // The field "resourceKeys" holds a list of keys that allows to limit the number
+    // of concurrent executions and activities triggered by this recipe.
+    //
+    // Administrators can configure the limit per resource key in the Administration > Settings > Flow build
+    // screen.
+
+    "resourceKeys" : []
 
 }
