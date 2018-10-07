@@ -17,12 +17,14 @@ Inside DSS, click the top right gear → Administration → Plugins → Store.
 
 - SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2017_06_09.zip
 
+- SCREAMINGFROG : ongoing
+
 ## Need help
 
 My blog : https://data-seo.com
 
+My traing website : https://dataseolabs.com
+
 My twitter : @vincentterrasi
 
-## Do you have a question
 
-Forums : http://discuss.data-seo.com
