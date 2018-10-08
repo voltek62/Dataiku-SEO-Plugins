@@ -1,0 +1,68 @@
+// This file is the descriptor for the Custom code recipe ScreamingFrogModeCrawl
+{
+    // Meta data for display purposes
+    "meta" : {
+        "label" : "Plugin to create a dataset from ScreamingFrogModeCrawl",
+        "description" : "",
+        "icon" : "icon-puzzle-piece"
+    },
+
+    "kind" : "R",
+    
+    "selectableFromDataset" : true,
+
+    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
+    // or more dataset to each input and output role.
+
+    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
+    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
+    // associate no dataset with the role.
+
+    "inputRoles" : [
+
+    ],
+
+    "outputRoles" : [
+        {
+            "name": "main_output",
+            "label": "main output displayed name",
+            "description": "",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    // The field "params" holds a list of all the params
+    // for wich the user will be prompted for values in the Settings tab of the recipe.
+
+    // The available parameter types are:
+    // STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, COLUMN, COLUMNS, TEXTAREA
+
+    "params": [
+        {
+            "name": "config",
+            "label" : "Config filename",
+            "type": "STRING",
+            "defaultValue": "defaultModeCrawl.seospiderconfig",
+            "description":"e.g. defaultModeCrawl.seospiderconfig",
+            "mandatory" : true
+        },
+        {
+            "name": "url",
+            "label" : "URL",
+            "type": "STRING",
+            "description":"e.g. https://www.ovh.com",
+            "mandatory" : true
+        }
+    ],
+
+    // The field "resourceKeys" holds a list of keys that allows to limit the number
+    // of concurrent executions and activities triggered by this recipe.
+    //
+    // Administrators can configure the limit per resource key in the Administration > Settings > Flow build
+    // screen.
+
+    "resourceKeys" : []
+
+}
