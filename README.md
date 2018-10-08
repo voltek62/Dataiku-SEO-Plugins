@@ -25,7 +25,7 @@ Inside DSS, click the top right gear → Administration → Plugins → Store.
 
 My blog : https://data-seo.com
 
-My traing website : https://dataseolabs.com
+Learn our methodologies  : https://dataseolabs.com
 
 My twitter : @vincentterrasi
 
