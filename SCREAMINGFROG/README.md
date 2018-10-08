@@ -23,12 +23,15 @@ $ screamingfrogseospider --help
 $ rm screamingfrogseospider_10.1_all.deb
 
 $ cd .ScreamingFrogSEOSpider
+
 $ nano licence.txt
-add 2 lines with your username and licence-key 
+
+- add 2 lines with your username and licence-key 
 
 $ nano spider.config
-$ add line : eula.accepted=8
+
+- add line : eula.accepted=8
 
 *Run and generate : /crawls/internal_html.csv*
 
-screamingfrogseospider --crawl https://data-seo.com --headless --save-crawl --output-folder /home/dataiku/crawls --export-format csv --export-tabs Internal:HTML --overwrite
+$ screamingfrogseospider --crawl https://data-seo.com --headless --save-crawl --output-folder /home/dataiku/crawls --export-format csv --export-tabs Internal:HTML --overwrite
