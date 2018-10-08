@@ -1,5 +1,5 @@
 # Dataiku-SEO-Plugins
-SEO Plugins for Dataiku 
+Data Marketing Plugins for Dataiku 
 
 ## Installing R for these plugins 
 
