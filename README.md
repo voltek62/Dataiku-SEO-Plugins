@@ -15,9 +15,11 @@ Inside DSS, click the top right gear → Administration → Plugins → Store.
 
 - SEARCHCONSOLE : SEARCHCONSOLE/dssPlugin_SEARCHCONSOLE__2017_06_09.zip
 
-- SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2017_06_09.zip
+- SEMRUSH : SEMRUSH/dssPlugin_SEMRUSH__2018_04_13.zip
 
-- SCREAMINGFROG : ongoing
+- SCREAMINGFROG Mode Crawl : SCREAMINGFROG/dssPlugin_ScreamingFrogModeCrawl__2018_10_08.zip 
+
+- SCREAMINGFROG Mode List : SCREAMINGFROG/dssPlugin_ScreamingFrogModeList__2018_10_08.zip
 
 ## Need help
 
