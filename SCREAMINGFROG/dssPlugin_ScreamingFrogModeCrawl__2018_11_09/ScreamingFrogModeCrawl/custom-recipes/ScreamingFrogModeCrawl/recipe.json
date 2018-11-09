@@ -49,6 +49,14 @@
             "mandatory" : true
         },
         {
+            "name": "report",
+            "label" : "Report",
+            "type": "STRING",
+            "defaultValue": "Internal:HTML",
+            "description":"e.g. Internal:HTML",
+            "mandatory" : true
+        },        
+        {
             "name": "url",
             "label" : "URL",
             "type": "STRING",

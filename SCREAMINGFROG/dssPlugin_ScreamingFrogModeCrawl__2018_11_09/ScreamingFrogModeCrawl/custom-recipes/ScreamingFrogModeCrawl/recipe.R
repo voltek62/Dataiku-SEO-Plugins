@@ -27,6 +27,10 @@ path_project <- paste0(path_home,"/managed_datasets/",dkuCustomVariable("project
 
 # get your url
 myurl <- config["url"]
+# get your report
+myreport <- config["report"]
+# set report name : 33 , 53, 54
+myreportname <- gsub(":", " - ", myreport)
 
 myconfig <- paste0(path_project,"/",config["config"])
 
@@ -37,7 +41,7 @@ fileoutput <- paste0(path_crawls,"/logs-",date,".txt")
 system2("screamingfrogseospider", 
                                 args = c("--crawl",myurl,"--headless","--save-crawl",
                                        "--output-folder",path_crawls,"--export-format","csv", 
-                                       "--export-tabs","Internal:HTML","--overwrite",
+                                       "--export-tabs",myreport,"--overwrite",
                                        "--config",myconfig,  
                                        "--timestamped-output"),
                                 stdout = fileoutput,
@@ -46,8 +50,8 @@ system2("screamingfrogseospider",
 t1 <- readLines(fileoutput)
 
 # Extract CSV filename
-i <- grep(paste0("Writing report Internal - HTML to ",path_crawls,"/"), t1)
-path <- strsplit(t1[i],"HTML to ")
+i <- grep(paste0("Writing report ",myreportname," to ",path_crawls,"/"), t1)
+path <- strsplit(t1[i],paste0(myreportname," to "))
 path_csv <- path[[1]][2]
 
 DF <- read.csv(path_csv, sep=",", skip=1 , check.names=FALSE)

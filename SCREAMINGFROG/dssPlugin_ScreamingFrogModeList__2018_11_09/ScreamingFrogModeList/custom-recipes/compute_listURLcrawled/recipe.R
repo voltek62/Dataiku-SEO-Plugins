@@ -55,6 +55,11 @@ myList <- dkuReadDataset(urls_in) %>%
 colnames(myList) <- "Url"
 myListURL <- myList$Url
 
+# get your report
+myreport <- config["report"]
+# set report name
+myreportname <- gsub(":", " - ", myreport)
+
 myconfig <- paste0(path_project,"/",config["config"])
 
 date <- format(Sys.time(),"%Y.%m.%d.%H.%M.%S")
@@ -68,7 +73,7 @@ write.table(myListURL, filelist, row.names = FALSE, col.names = FALSE, quote=FAL
 system2("screamingfrogseospider", 
                                 args = c("--crawl-list",filelist,"--headless","--save-crawl",
                                        "--output-folder",path_crawls,"--export-format","csv", 
-                                       "--export-tabs","Internal:HTML","--overwrite",
+                                       "--export-tabs",myreport,"--overwrite",
                                        "--config",myconfig,  
                                        "--timestamped-output"),
                                 stdout = fileoutput,
@@ -77,8 +82,8 @@ system2("screamingfrogseospider",
 t1 <- readLines(fileoutput)
 
 # Extract CSV filename
-i <- grep(paste0("Writing report Internal - HTML to ",path_crawls,"/"), t1)
-path <- strsplit(t1[i],"HTML to ")
+i <- grep(paste0("Writing report ",myreportname," to ",path_crawls,"/"), t1)
+path <- strsplit(t1[i],paste0(myreportname," to "))
 path_csv <- path[[1]][2]
 
 DF <- read.csv(path_csv, sep=",", skip=1 , check.names=FALSE)
