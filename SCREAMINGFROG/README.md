@@ -1,7 +1,9 @@
 **Install Screaming Frog on your DSS**
 
 $ sudo su dataiku
+
 $ cd /home/dataiku/
+
 $ mkdir crawls
 
 *Prepare*
