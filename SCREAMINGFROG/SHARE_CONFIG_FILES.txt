@@ -1,0 +1,13 @@
+**How to share your screamingfrog config files with the plugin
+
+Create a folder
+
+> Dataset > Folder
+
+Choose a name, store into filesystem_managed > not partitioned
+
+Click on Settings and Choose the Path of your project. Very important
+
+Click on View on uploading your ScreamingFrog config files :
+- defaultModeCrawl.seospiderconfig
+- defaultModeList.seospiderconfig
